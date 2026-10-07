@@ -1,0 +1,1097 @@
+=========================================================
+ FYP BATTERY DIGITAL TWIN - MODEL EXPORT
+=========================================================
+
+MATLAB Current Folder:
+/home/tastytaco/Desktop/Validation
+
+Total blocks found: 86
+
+
+--------------------------------------------
+BLOCK 1
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery
+Name: Physical_Battery
+BlockType: SubSystem
+
+--------------------------------------------
+BLOCK 2
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/I_command
+Name: I_command
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 3
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/T_ambient
+Name: T_ambient
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 4
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model
+Name:  SOC Model
+BlockType: SubSystem
+
+--------------------------------------------
+BLOCK 5
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/I_command
+Name: I_command
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 6
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/Qavailable
+Name: Qavailable
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 7
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/Divide
+Name: Divide
+BlockType: Product
+
+--------------------------------------------
+BLOCK 8
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/Gain
+Name: Gain
+BlockType: Gain
+
+--------------------------------------------
+BLOCK 9
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/Gain1
+Name: Gain1
+BlockType: Gain
+
+--------------------------------------------
+BLOCK 10
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/IC
+Name: IC
+BlockType: Integrator
+
+--------------------------------------------
+BLOCK 11
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/Q_available
+Name: Q_available
+BlockType: Gain
+
+--------------------------------------------
+BLOCK 12
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/Saturation
+Name: Saturation
+BlockType: Saturate
+
+--------------------------------------------
+BLOCK 13
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/SOC_true
+Name: SOC_true
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 14
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/OCV_Lookup
+Name: OCV_Lookup
+BlockType: SubSystem
+
+--------------------------------------------
+BLOCK 15
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/OCV_Lookup/SOC_true
+Name: SOC_true
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 16
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/OCV_Lookup/1-D Lookup
+Table
+Name: 1-D Lookup
+Table
+BlockType: Lookup_n-D
+
+--------------------------------------------
+BLOCK 17
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/OCV_Lookup/OCV
+Name: OCV
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 18
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1
+Name: R1C1
+BlockType: SubSystem
+
+--------------------------------------------
+BLOCK 19
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1/I_command
+Name: I_command
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 20
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1/Add
+Name: Add
+BlockType: Sum
+
+--------------------------------------------
+BLOCK 21
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1/Gain
+Name: Gain
+BlockType: Gain
+
+--------------------------------------------
+BLOCK 22
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1/Gain1
+Name: Gain1
+BlockType: Gain
+
+--------------------------------------------
+BLOCK 23
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1/Integrator
+Name: Integrator
+BlockType: Integrator
+
+--------------------------------------------
+BLOCK 24
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1/v1
+Name: v1
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 25
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2
+Name: R2C2
+BlockType: SubSystem
+
+--------------------------------------------
+BLOCK 26
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2/I_command
+Name: I_command
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 27
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2/Add
+Name: Add
+BlockType: Sum
+
+--------------------------------------------
+BLOCK 28
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2/Gain
+Name: Gain
+BlockType: Gain
+
+--------------------------------------------
+BLOCK 29
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2/Gain1
+Name: Gain1
+BlockType: Gain
+
+--------------------------------------------
+BLOCK 30
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2/Integrator
+Name: Integrator
+BlockType: Integrator
+
+--------------------------------------------
+BLOCK 31
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2/v2
+Name: v2
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 32
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model
+Name: ageing model
+BlockType: SubSystem
+
+--------------------------------------------
+BLOCK 33
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/I
+Name: I
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 34
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/T_battery
+Name: T_battery
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 35
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/SOC
+Name: SOC
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 36
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Abs
+Name: Abs
+BlockType: Abs
+
+--------------------------------------------
+BLOCK 37
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Add
+Name: Add
+BlockType: Sum
+
+--------------------------------------------
+BLOCK 38
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Add1
+Name: Add1
+BlockType: Sum
+
+--------------------------------------------
+BLOCK 39
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Battery.R0
+
+Name: Battery.R0
+
+BlockType: Constant
+
+--------------------------------------------
+BLOCK 40
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Constant
+Name: Constant
+BlockType: Constant
+
+--------------------------------------------
+BLOCK 41
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Constant1
+Name: Constant1
+BlockType: Constant
+
+--------------------------------------------
+BLOCK 42
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Constant2
+Name: Constant2
+BlockType: Constant
+
+--------------------------------------------
+BLOCK 43
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Gain
+Name: Gain
+BlockType: Gain
+
+--------------------------------------------
+BLOCK 44
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Integrator
+Name: Integrator
+BlockType: Integrator
+
+--------------------------------------------
+BLOCK 45
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Product
+Name: Product
+BlockType: Product
+
+--------------------------------------------
+BLOCK 46
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Product1
+Name: Product1
+BlockType: Product
+
+--------------------------------------------
+BLOCK 47
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Saturation
+Name: Saturation
+BlockType: Saturate
+
+--------------------------------------------
+BLOCK 48
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/k_Q
+Name: k_Q
+BlockType: Gain
+
+--------------------------------------------
+BLOCK 49
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/k_R
+Name: k_R
+BlockType: Gain
+
+--------------------------------------------
+BLOCK 50
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/SOH_true
+Name: SOH_true
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 51
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/R0_current
+Name: R0_current
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 52
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Ah_throughput
+Name: Ah_throughput
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 53
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Q_available
+Name: Q_available
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 54
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage
+Name: terminal voltage
+BlockType: SubSystem
+
+--------------------------------------------
+BLOCK 55
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/OCV
+Name: OCV
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 56
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/I
+Name: I
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 57
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/V1
+Name: V1
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 58
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/v2
+Name: v2
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 59
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/R0_current
+Name: R0_current
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 60
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/Add
+Name: Add
+BlockType: Sum
+
+--------------------------------------------
+BLOCK 61
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/Product
+Name: Product
+BlockType: Product
+
+--------------------------------------------
+BLOCK 62
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/V_battery
+Name: V_battery
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 63
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model
+Name: thermal model
+BlockType: SubSystem
+
+--------------------------------------------
+BLOCK 64
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/T_ambient
+Name: T_ambient
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 65
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/I
+Name: I
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 66
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/V1
+Name: V1
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 67
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/V2
+Name: V2
+BlockType: Inport
+
+--------------------------------------------
+BLOCK 68
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Add
+Name: Add
+BlockType: Sum
+
+--------------------------------------------
+BLOCK 69
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Add1
+Name: Add1
+BlockType: Sum
+
+--------------------------------------------
+BLOCK 70
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Add2
+Name: Add2
+BlockType: Sum
+
+--------------------------------------------
+BLOCK 71
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Constant
+Name: Constant
+BlockType: Constant
+
+--------------------------------------------
+BLOCK 72
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Gain
+Name: Gain
+BlockType: Gain
+
+--------------------------------------------
+BLOCK 73
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Gain1
+Name: Gain1
+BlockType: Gain
+
+--------------------------------------------
+BLOCK 74
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Integrator
+Name: Integrator
+BlockType: Integrator
+
+--------------------------------------------
+BLOCK 75
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Math
+Function
+Name: Math
+Function
+BlockType: Math
+
+--------------------------------------------
+BLOCK 76
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Product
+Name: Product
+BlockType: Product
+
+--------------------------------------------
+BLOCK 77
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Product1
+Name: Product1
+BlockType: Product
+
+--------------------------------------------
+BLOCK 78
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Product2
+Name: Product2
+BlockType: Product
+
+--------------------------------------------
+BLOCK 79
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/T_battery
+Name: T_battery
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 80
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/V_battery
+Name: V_battery
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 81
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/I_battery
+Name: I_battery
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 82
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/T_battery
+Name: T_battery
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 83
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/SOC_true
+Name: SOC_true
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 84
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/SOH_true
+Name: SOH_true
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 85
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/Q_available
+Name: Q_available
+BlockType: Outport
+
+--------------------------------------------
+BLOCK 86
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R0_current
+Name: R0_current
+BlockType: Outport
+
+
+=========================================================
+2. IMPORTANT BLOCK PARAMETERS
+=========================================================
+
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/I_command
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/T_ambient
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/I_command
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/Qavailable
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/Divide
+Type: Product
+Inputs: */
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/Gain
+Type: Gain
+Gain: -1
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/Gain1
+Type: Gain
+Gain: 3600
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/IC
+Type: Integrator
+InitialCondition: Battery.SOC_initial
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/Q_available
+Type: Gain
+Gain: Battery.eta_discharge
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/Saturation
+Type: Saturate
+LowerLimit: 0
+UpperLimit: 1
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ SOC Model/SOC_true
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/OCV_Lookup/SOC_true
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/OCV_Lookup/1-D Lookup
+Table
+Type: Lookup_n-D
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/OCV_Lookup/OCV
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1/I_command
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1/Add
+Type: Sum
+Inputs: +-
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1/Gain
+Type: Gain
+Gain: 1/(Battery.R1*Battery.C1)
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1/Gain1
+Type: Gain
+Gain: 1/Battery.C1
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1/Integrator
+Type: Integrator
+InitialCondition: 0
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R1C1/v1
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2/I_command
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2/Add
+Type: Sum
+Inputs: +-
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2/Gain
+Type: Gain
+Gain: 1/(Battery.R2*Battery.C2)
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2/Gain1
+Type: Gain
+Gain: 1/Battery.C2
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2/Integrator
+Type: Integrator
+InitialCondition: 0
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R2C2/v2
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/I
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/T_battery
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/SOC
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Add
+Type: Sum
+Inputs: +-
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Add1
+Type: Sum
+Inputs: ++
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Battery.R0
+
+Type: Constant
+Value: Battery.R0
+
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Constant
+Type: Constant
+Value: 1
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Constant1
+Type: Constant
+Value: Battery.Q_nom_Ah
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Constant2
+Type: Constant
+Value: 1
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Gain
+Type: Gain
+Gain: 1/3600
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Integrator
+Type: Integrator
+InitialCondition: 0
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Product
+Type: Product
+Inputs: 2
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Product1
+Type: Product
+Inputs: 2
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Saturation
+Type: Saturate
+LowerLimit: 0
+UpperLimit: 1
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/k_Q
+Type: Gain
+Gain: Battery.Aging.capacity_fade_per_Ah
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/k_R
+Type: Gain
+Gain: Battery.Aging.resistance_growth_per_Ah
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/SOH_true
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/R0_current
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Ah_throughput
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/ageing model/Q_available
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/OCV
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/I
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/V1
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/v2
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/R0_current
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/Add
+Type: Sum
+Inputs: +---
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/Product
+Type: Product
+Inputs: 2
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/terminal voltage/V_battery
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/T_ambient
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/I
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/V1
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/V2
+Type: Inport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Add
+Type: Sum
+Inputs: +++
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Add1
+Type: Sum
+Inputs: +-
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Add2
+Type: Sum
+Inputs: +-
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Constant
+Type: Constant
+Value: Battery.R0
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Gain
+Type: Gain
+Gain: Battery.Thermal.hA
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Gain1
+Type: Gain
+Gain: 1/Battery.Thermal.Cth
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Integrator
+Type: Integrator
+InitialCondition: Battery.T_initial_C
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Math
+Function
+Type: Math
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Product
+Type: Product
+Inputs: 2
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Product1
+Type: Product
+Inputs: 2
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/Product2
+Type: Product
+Inputs: 2
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/thermal model/T_battery
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/V_battery
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/I_battery
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/T_battery
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/SOC_true
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/SOH_true
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/Q_available
+Type: Outport
+
+--------------------------------------------
+Path: Battery_Digital_Twin/Physical_Battery/R0_current
+Type: Outport
+
+
+=========================================================
+3. SIGNAL CONNECTIONS
+=========================================================
+
+
+============================================
+SYSTEM: Battery_Digital_Twin
+============================================
+
+============================================
+SYSTEM: Battery_Digital_Twin/Physical_Battery
+============================================
+
+============================================
+SYSTEM: Battery_Digital_Twin/Physical_Battery/ SOC Model
+============================================
+
+SOURCE:  SOC Model
+    --> DESTINATION: SOC_true
+    --> DESTINATION: OCV_Lookup
+
+============================================
+SYSTEM: Battery_Digital_Twin/Physical_Battery/OCV_Lookup
+============================================
+
+SOURCE: OCV_Lookup
+    --> DESTINATION: terminal voltage
+
+============================================
+SYSTEM: Battery_Digital_Twin/Physical_Battery/R1C1
+============================================
+
+SOURCE: R1C1
+    --> DESTINATION: thermal model
+    --> DESTINATION: terminal voltage
+
+============================================
+SYSTEM: Battery_Digital_Twin/Physical_Battery/R2C2
+============================================
+
+SOURCE: R2C2
+    --> DESTINATION: thermal model
+    --> DESTINATION: terminal voltage
+
+============================================
+SYSTEM: Battery_Digital_Twin/Physical_Battery/ageing model
+============================================
+
+SOURCE: ageing model
+    --> DESTINATION: SOH_true
+
+SOURCE: ageing model
+    --> DESTINATION: R0_current
+
+SOURCE: ageing model
+    --> DESTINATION: Q_available
+    --> DESTINATION:  SOC Model
+
+============================================
+SYSTEM: Battery_Digital_Twin/Physical_Battery/terminal voltage
+============================================
+
+SOURCE: terminal voltage
+    --> DESTINATION: V_battery
+
+============================================
+SYSTEM: Battery_Digital_Twin/Physical_Battery/thermal model
+============================================
+
+SOURCE: thermal model
+    --> DESTINATION: ageing model
+    --> DESTINATION: T_battery
+
+
+=========================================================
+4. MODEL INPUTS AND OUTPUTS
+=========================================================
+
+INPUT PORTS:
+
+  Battery_Digital_Twin/Physical_Battery/I_command
+  Battery_Digital_Twin/Physical_Battery/T_ambient
+  Battery_Digital_Twin/Physical_Battery/ SOC Model/I_command
+  Battery_Digital_Twin/Physical_Battery/ SOC Model/Qavailable
+  Battery_Digital_Twin/Physical_Battery/OCV_Lookup/SOC_true
+  Battery_Digital_Twin/Physical_Battery/R1C1/I_command
+  Battery_Digital_Twin/Physical_Battery/R2C2/I_command
+  Battery_Digital_Twin/Physical_Battery/ageing model/I
+  Battery_Digital_Twin/Physical_Battery/ageing model/T_battery
+  Battery_Digital_Twin/Physical_Battery/ageing model/SOC
+  Battery_Digital_Twin/Physical_Battery/terminal voltage/OCV
+  Battery_Digital_Twin/Physical_Battery/terminal voltage/I
+  Battery_Digital_Twin/Physical_Battery/terminal voltage/V1
+  Battery_Digital_Twin/Physical_Battery/terminal voltage/v2
+  Battery_Digital_Twin/Physical_Battery/terminal voltage/R0_current
+  Battery_Digital_Twin/Physical_Battery/thermal model/T_ambient
+  Battery_Digital_Twin/Physical_Battery/thermal model/I
+  Battery_Digital_Twin/Physical_Battery/thermal model/V1
+  Battery_Digital_Twin/Physical_Battery/thermal model/V2
+
+OUTPUT PORTS:
+
+  Battery_Digital_Twin/Physical_Battery/ SOC Model/SOC_true
+  Battery_Digital_Twin/Physical_Battery/OCV_Lookup/OCV
+  Battery_Digital_Twin/Physical_Battery/R1C1/v1
+  Battery_Digital_Twin/Physical_Battery/R2C2/v2
+  Battery_Digital_Twin/Physical_Battery/ageing model/SOH_true
+  Battery_Digital_Twin/Physical_Battery/ageing model/R0_current
+  Battery_Digital_Twin/Physical_Battery/ageing model/Ah_throughput
+  Battery_Digital_Twin/Physical_Battery/ageing model/Q_available
+  Battery_Digital_Twin/Physical_Battery/terminal voltage/V_battery
+  Battery_Digital_Twin/Physical_Battery/thermal model/T_battery
+  Battery_Digital_Twin/Physical_Battery/V_battery
+  Battery_Digital_Twin/Physical_Battery/I_battery
+  Battery_Digital_Twin/Physical_Battery/T_battery
+  Battery_Digital_Twin/Physical_Battery/SOC_true
+  Battery_Digital_Twin/Physical_Battery/SOH_true
+  Battery_Digital_Twin/Physical_Battery/Q_available
+  Battery_Digital_Twin/Physical_Battery/R0_current
