@@ -7,20 +7,53 @@ clearvars -except Battery Plant
 clc;
 
 %% ---------------------------------------------------------
+% PROJECT PATH
+% ---------------------------------------------------------
+
+projectRoot = fileparts(fileparts(mfilename("fullpath")));
+
+%% ---------------------------------------------------------
 % LOAD SELECTED BATTERY PROFILE
 % ---------------------------------------------------------
 
-run("../Parameters/init_molicel_M35A.m");
-run("../Parameters/init_sensors.m");
+profilePath = fullfile( ...
+    projectRoot, ...
+    "Parameters", ...
+    "Battery_Profiles", ...
+    "battery_molicel_M35A.m");
 
-%% Initialize physical plant variables
-run("../Physical_battery/battery_plant.m");
+clear Battery
+
+run(profilePath);
+
+%% ---------------------------------------------------------
+% LOAD SENSOR PARAMETERS
+% ---------------------------------------------------------
+
+sensorPath = fullfile( ...
+    projectRoot, ...
+    "Parameters", ...
+    "init_sensors.m");
+
+run(sensorPath);
+
+%% ---------------------------------------------------------
+% INITIALIZE PHYSICAL PLANT VARIABLES
+% ---------------------------------------------------------
+
+plantPath = fullfile( ...
+    projectRoot, ...
+    "Physical_battery", ...
+    "battery_plant.m");
+
+run(plantPath);
 
 %% ---------------------------------------------------------
 % SIMULATION SETTINGS
 % ---------------------------------------------------------
 
 Ts = 0.1;
+
 T_end = 300;
 
 t = (0:Ts:T_end)';
@@ -50,21 +83,21 @@ I_command(t >= 250) = 0;
 % AMBIENT TEMPERATURE
 % ---------------------------------------------------------
 %
-% IMPORTANT:
 % Ambient temperature comes from the selected battery profile.
 %
 % For Molicel M35A:
 % Battery.Thermal.T_ambient_C = 42 °C
 
-T_ambient = Battery.Thermal.T_ambient_C * ones(size(t));
+T_ambient = ...
+    Battery.Thermal.T_ambient_C * ones(size(t));
 
 %% ---------------------------------------------------------
 % CREATE SIMULINK INPUTS
 % ---------------------------------------------------------
 
-I_input = timeseries(I_command,t);
+I_input = timeseries(I_command, t);
 
-T_ambient_input = timeseries(T_ambient,t);
+T_ambient_input = timeseries(T_ambient, t);
 
 %% ---------------------------------------------------------
 % DISPLAY VALIDATION PROFILE
@@ -79,7 +112,12 @@ fprintf('Simulation time       : %.1f s\n', T_end);
 fprintf('Sample time           : %.2f s\n', Ts);
 
 fprintf('\n');
-fprintf('Battery               : %s\n', Battery.PartNumber);
+
+if isfield(Battery, "PartNumber")
+    fprintf('Battery               : %s\n', Battery.PartNumber);
+else
+    fprintf('Battery               : %s\n', Battery.Name);
+end
 
 fprintf('Initial SOC           : %.2f\n', ...
     Battery.SOC_initial);
@@ -91,6 +129,7 @@ fprintf('Ambient temperature   : %.2f °C\n', ...
     Battery.Thermal.T_ambient_C);
 
 fprintf('\n');
+
 fprintf('Current profile:\n');
 fprintf('0-50 s                : 0 A\n');
 fprintf('50-150 s              : +1 A discharge\n');
@@ -99,8 +138,15 @@ fprintf('200-250 s             : -1 A charge\n');
 fprintf('250-300 s             : 0 A\n');
 
 fprintf('\n');
+
 fprintf('Simulink input variables created:\n');
-fprintf('I_input\n');
-fprintf('T_ambient_input\n');
+fprintf('  I_input\n');
+fprintf('  T_ambient_input\n');
+
+fprintf('\n');
+
+fprintf('Workspace verification:\n');
+
+whos I_input T_ambient_input
 
 fprintf('============================================================\n');
