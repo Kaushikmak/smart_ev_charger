@@ -18,7 +18,7 @@ Sensors.Current.SampleTime = 0.1;
 %% Temperature Sensor
 Sensors.Temperature.Bias_C = 0.1;
 Sensors.Temperature.Noise_Mean_C = 0;
-Sensors.Temperature.Noise_Variance_C2 = 0.01;
+Sensors.Temperature.Noise_Variance_C2 = 0.001;
 Sensors.Temperature.SampleTime = 0.1;
 
 disp("Sensor parameters loaded successfully.");
