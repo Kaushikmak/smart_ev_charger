@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="ReportName">simulink-default.rpt</P>
+  <P Name="SIDHighWatermark">896</P>
+  <Block BlockType="SubSystem" Name="Battery_pack" SID="345">
+    <PortCounts in="3" out="2"/>
+    <P Name="Position">[430, -172, 620, 2]</P>
+    <P Name="ZOrder">47</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">measurement</P>
+      </Port>
+      <Port Type="out" Index="2">
+        <P Name="PropagatedSignals">it</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_345"/>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector" SID="366">
+    <PortCounts in="1" out="4"/>
+    <P Name="Position">[670, -170, 675, -80]</P>
+    <P Name="ZOrder">66</P>
+    <P Name="OutputSignals">m1 (signal 1).vtm,m1 (signal 1).theta_bat_m,m1 (signal 1).SOCm,OCV (signal 9)</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">&lt;vtm&gt;</P>
+      </Port>
+      <Port Type="out" Index="2">
+        <P Name="Name">&lt;theta_bat_m&gt;</P>
+      </Port>
+      <Port Type="out" Index="3">
+        <P Name="Name">&lt;SOCm&gt;</P>
+      </Port>
+      <Port Type="out" Index="4">
+        <P Name="Name">&lt;OCV (signal 9)&gt;</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="351">
+    <P Name="Position">[-35, -240, -5, -210]</P>
+    <P Name="ZOrder">49</P>
+    <P Name="Value">30</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="382">
+    <P Name="Position">[-35, -160, -5, -130]</P>
+    <P Name="ZOrder">70</P>
+  </Block>
+  <Block BlockType="Constant" Name="OCV" SID="364">
+    <P Name="Position">[315, -100, 345, -70]</P>
+    <P Name="ZOrder">64</P>
+    <P Name="Value">300</P>
+  </Block>
+  <Block BlockType="DiscretePulseGenerator" Name="Pulse&#xA;Generator" SID="380">
+    <PortCounts out="1"/>
+    <P Name="Position">[-35, -71, -5, -39]</P>
+    <P Name="ZOrder">68</P>
+    <P Name="PulseType">Time based</P>
+    <P Name="Amplitude">15</P>
+    <P Name="Period">20*60</P>
+    <P Name="PulseWidth">50</P>
+  </Block>
+  <Block BlockType="Saturate" Name="Saturation" SID="363">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[310, -160, 350, -130]</P>
+    <P Name="ZOrder">63</P>
+    <P Name="UpperLimit">320</P>
+    <P Name="LowerLimit">0</P>
+  </Block>
+  <Block BlockType="Scope" Name="Scope" SID="367">
+    <PortCounts in="5"/>
+    <P Name="Position">[840, -167, 890, -93]</P>
+    <P Name="ZOrder">67</P>
+    <P Name="GraphicalSettings">{&quot;Style&quot;:{&quot;BackgroundColor&quot;:[0.12941176470588237,0.12941176470588237,0.12941176470588237],&quot;AxesColor&quot;:[0.07058823529411765,0.07058823529411765,0.07058823529411765],&quot;LabelsColor&quot;:[0.8509803921568627,0.8509803921568627,0.8509803921568627],&quot;PreserveColors&quot;:false,&quot;Visible&quot;:[true,true,true,true,true],&quot;LineStyle&quot;:[&quot;-&quot;,&quot;-&quot;,&quot;-&quot;,&quot;-&quot;,&quot;-&quot;],&quot;LineWidth&quot;:[1.5,1.5,1.5,1.5,1.5],&quot;BarWidth&quot;:[0.9,0.9,0.9,0.9,0.9],&quot;LineColor&quot;:[&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;],&quot;LineFaceAlpha&quot;:[1,1,1,1,1],&quot;LineEdgeAlpha&quot;:[1,1,1,1,1],&quot;Marker&quot;:[&quot;none&quot;,&quot;none&quot;,&quot;none&quot;,&quot;none&quot;,&quot;none&quot;],&quot;FontSize&quot;:8.5,&quot;LineTrueColor&quot;:[[1,0.9098039215686274,0.39215686274509803],[1,0.9098039215686274,0.39215686274509803],[1,0.9098039215686274,0.39215686274509803],[1,0.9098039215686274,0.39215686274509803],[1,0.9098039215686274,0.39215686274509803]],&quot;ChannelNames&quot;:&quot;&quot;,&quot;DefaultLegendLabel&quot;:[&quot;i_ref&quot;,&quot;&lt;vtm&gt;&quot;,&quot;&lt;theta_bat_m&gt;&quot;,&quot;&lt;SOCm&gt;&quot;,&quot;&lt;OCV (signal 9)&gt;&quot;],&quot;PlotType&quot;:&quot;Auto&quot;,&quot;NumLinesForDisplays&quot;:[1,1,1,1,1],&quot;OffsetView&quot;:true,&quot;LineLabels&quot;:[&quot;i_ref&quot;,&quot;&lt;vtm&gt;&quot;,&quot;&lt;theta_bat_m&gt;&quot;,&quot;&lt;SOCm&gt;&quot;,&quot;&lt;OCV (signal 9)&gt;&quot;],&quot;MinimizeControls&quot;:false,&quot;LineCache&quot;:null},&quot;MeasurementChannel&quot;:0,&quot;DateTimeAxisProperties&quot;:{&quot;ShowTAxisDateTime&quot;:false},&quot;AxesScalingProperties&quot;:{&quot;AxesScaling&quot;:&quot;Manual&quot;,&quot;ExpandOnly&quot;:true,&quot;AxesScalingNumUpdates&quot;:10,&quot;ScaleAxesLimitsAtStop&quot;:false,&quot;YAxisDataRange&quot;:80,&quot;AlignYAxis&quot;:&quot;Center&quot;,&quot;AutoScaleXAxisLimits&quot;:false,&quot;XAxisDataRange&quot;:100,&quot;AlignXAxis&quot;:&quot;Center&quot;},&quot;DisplayProperties&quot;:{&quot;DisplayLayoutDimensions&quot;:[5,1],&quot;DisplayPropertyDefaults&quot;:{&quot;MaxYLimMag&quot;:337.49997972429304,&quot;MaxYLimReal&quot;:337.49997972429304,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-37.49981751863717,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;},&quot;DisplayContentCache&quot;:{&quot;Title&quot;:&quot;&quot;,&quot;LinePropertiesCache&quot;:{},&quot;UserDefinedChannelNames&quot;:{},&quot;PlotMagPhase&quot;:0},&quot;SerializedDisplays&quot;:[{&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;LinePropertiesCache&quot;:{},&quot;UserDefinedChannelNames&quot;:{},&quot;PlotMagPhase&quot;:0,&quot;MaxYLimMag&quot;:40,&quot;MaxYLimReal&quot;:-20,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-40,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;YLabel&quot;:&quot;&quot;,&quot;NumLines&quot;:1,&quot;ShowContent&quot;:1,&quot;Placement&quot;:0},{&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;LinePropertiesCache&quot;:{},&quot;UserDefinedChannelNames&quot;:{},&quot;PlotMagPhase&quot;:0,&quot;MaxYLimMag&quot;:39.13843216572002,&quot;MaxYLimReal&quot;:39.13843216572002,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-6.008832329903282,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;YLabel&quot;:&quot;&quot;,&quot;NumLines&quot;:1,&quot;ShowContent&quot;:1,&quot;Placement&quot;:1},{&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;LinePropertiesCache&quot;:{},&quot;UserDefinedChannelNames&quot;:{},&quot;PlotMagPhase&quot;:0,&quot;MaxYLimMag&quot;:75.03923221656645,&quot;MaxYLimReal&quot;:75.03923221656645,&quot;MinYLimMag&quot;:41.662307531492615,&quot;MinYLimReal&quot;:41.662307531492615,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;YLabel&quot;:&quot;&quot;,&quot;NumLines&quot;:1,&quot;ShowContent&quot;:1,&quot;Placement&quot;:2},{&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;LinePropertiesCache&quot;:{},&quot;UserDefinedChannelNames&quot;:{},&quot;PlotMagPhase&quot;:0,&quot;MaxYLimMag&quot;:1.0986327464983496,&quot;MaxYLimReal&quot;:1.0986327464983496,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-0.12206971848514704,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;YLabel&quot;:&quot;&quot;,&quot;NumLines&quot;:1,&quot;ShowContent&quot;:1,&quot;Placement&quot;:3},{&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;LinePropertiesCache&quot;:{},&quot;UserDefinedChannelNames&quot;:{},&quot;PlotMagPhase&quot;:0,&quot;MaxYLimMag&quot;:337.49997972429304,&quot;MaxYLimReal&quot;:337.49997972429304,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-37.49981751863717,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;YLabel&quot;:&quot;&quot;,&quot;NumLines&quot;:1,&quot;ShowContent&quot;:1,&quot;Placement&quot;:4}],&quot;ColorOrder&quot;:[&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;]}}</P>
+    <P Name="WindowPosition">[455.000000,68.000000,454.000000,810.000000,]</P>
+    <P Name="Visible">on</P>
+    <P Name="ScopeFrameLocation">window</P>
+    <P Name="WasSavedAsWebScope">on</P>
+    <P Name="Floating">off</P>
+    <P Name="MultipleDisplayCache">[{&quot;MaxYLimMag&quot;:40,&quot;MaxYLimReal&quot;:40,&quot;MinYLimMag&quot;:20,&quot;MinYLimReal&quot;:20,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;},{&quot;MaxYLimMag&quot;:42.255390026672849,&quot;MaxYLimReal&quot;:42.255390026672849,&quot;MinYLimMag&quot;:34.654614378289608,&quot;MinYLimReal&quot;:34.654614378289608,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;},{&quot;MaxYLimMag&quot;:46.912658641217192,&quot;MaxYLimReal&quot;:46.912658641217192,&quot;MinYLimMag&quot;:44.787482373198088,&quot;MinYLimReal&quot;:44.787482373198088,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;},{&quot;MaxYLimMag&quot;:1.050050425818345,&quot;MaxYLimReal&quot;:1.050050425818345,&quot;MinYLimMag&quot;:0.96620785008445176,&quot;MinYLimReal&quot;:0.96620785008445176,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;},{&quot;MaxYLimMag&quot;:322.57549081139553,&quot;MaxYLimReal&quot;:322.57549081139553,&quot;MinYLimMag&quot;:296.81905154594364,&quot;MinYLimReal&quot;:296.81905154594364,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;}]</P>
+    <P Name="NumInputPorts">5</P>
+    <P Name="LayoutDimensionsString">[5,1]</P>
+    <P Name="ActiveDisplayYMinimum">20</P>
+    <P Name="ActiveDisplayYMaximum">40</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Subsystem" SID="355">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[200, -169, 245, -121]</P>
+    <P Name="ZOrder">62</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_355"/>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="352">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[120, -165, 160, -125]</P>
+    <P Name="ZOrder">50</P>
+    <P Name="Inputs">|+-</P>
+  </Block>
+  <Block BlockType="Switch" Name="Switch" SID="381">
+    <P Name="Position">[35, -165, 85, -125]</P>
+    <P Name="ZOrder">69</P>
+    <P Name="Criteria">u2 &gt; Threshold</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">i_ref</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Constant" Name="theta_amb" SID="365">
+    <P Name="Position">[315, -40, 345, -10]</P>
+    <P Name="ZOrder">65</P>
+    <P Name="Value">45</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">209</P>
+    <P Name="Src">345#out:2</P>
+    <P Name="Points">[19, 0; 0, 76; -504, 0]</P>
+    <P Name="Dst">352#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">210</P>
+    <P Name="Src">352#out:1</P>
+    <P Name="Dst">355#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">211</P>
+    <P Name="Src">355#out:1</P>
+    <P Name="Dst">363#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">212</P>
+    <P Name="Src">363#out:1</P>
+    <P Name="Dst">345#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">215</P>
+    <P Name="Src">364#out:1</P>
+    <P Name="Dst">345#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">216</P>
+    <P Name="Src">365#out:1</P>
+    <P Name="Dst">345#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">217</P>
+    <P Name="Src">345#out:1</P>
+    <P Name="Dst">366#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;vtm&gt;</P>
+    <P Name="ZOrder">220</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">366#out:1</P>
+    <P Name="Points">[89, 0; 0, 10]</P>
+    <P Name="Dst">367#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;theta_bat_m&gt;</P>
+    <P Name="ZOrder">221</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">366#out:2</P>
+    <P Name="Points">[56, 0; 0, 5]</P>
+    <P Name="Dst">367#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;SOCm&gt;</P>
+    <P Name="ZOrder">222</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">366#out:3</P>
+    <P Name="Dst">367#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">i_ref</P>
+    <P Name="ZOrder">223</P>
+    <P Name="Src">381#out:1</P>
+    <P Name="Points">[13, 0]</P>
+    <Branch>
+      <P Name="ZOrder">227</P>
+      <P Name="Labels">[2, 1]</P>
+      <P Name="Points">[0, -51; 694, 0; 0, 36]</P>
+      <P Name="Dst">367#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">226</P>
+      <P Name="Dst">352#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">224</P>
+    <P Name="Src">351#out:1</P>
+    <P Name="Points">[15, 0; 0, 65]</P>
+    <P Name="Dst">381#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">225</P>
+    <P Name="Src">380#out:1</P>
+    <P Name="Points">[15, 0; 0, -75]</P>
+    <P Name="Dst">381#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">228</P>
+    <P Name="Src">382#out:1</P>
+    <P Name="Dst">381#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;OCV (signal 9)&gt;</P>
+    <P Name="ZOrder">229</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">366#out:4</P>
+    <P Name="Points">[73, 0; 0, -5]</P>
+    <P Name="Dst">367#in:5</P>
+  </Line>
+</System>

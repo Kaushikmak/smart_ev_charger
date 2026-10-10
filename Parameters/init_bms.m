@@ -24,6 +24,7 @@ BMS.SOH.Max = 1;
 
 % SOH stress-model weights
 BMS.SOH.VoltageStressWeight = 1.0;
+BMS.SOH.TemperatureStressWeight = 1.0;
 
 % Coulomb-counting efficiency
 BMS.SOC.Efficiency = Battery.eta_discharge;

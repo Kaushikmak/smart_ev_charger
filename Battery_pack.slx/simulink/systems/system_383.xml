@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <Block BlockType="Inport" Name="vocv" SID="384">
+    <P Name="Position">[320, 58, 350, 72]</P>
+    <P Name="ZOrder">45</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">vocv</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Constant" Name="Ah" SID="378">
+    <P Name="Position">[125, 355, 155, 385]</P>
+    <P Name="ZOrder">43</P>
+    <P Name="Value">150</P>
+  </Block>
+  <Block BlockType="Product" Name="Divide" SID="377">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[310, 312, 340, 343]</P>
+    <P Name="ZOrder">42</P>
+    <P Name="Inputs">*/</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">SOCm</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Gain" Name="Gain1" SID="379">
+    <P Name="Position">[205, 355, 235, 385]</P>
+    <P Name="ZOrder">44</P>
+    <P Name="Gain">3600</P>
+  </Block>
+  <Block BlockType="Product" Name="Product" SID="372">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[125, 302, 155, 333]</P>
+    <P Name="ZOrder">37</P>
+  </Block>
+  <Block BlockType="Constant" Name="co/12" SID="375">
+    <P Name="Position">[20, 301, 85, 349]</P>
+    <P Name="ZOrder">40</P>
+    <P Name="Value">168.75e3/12</P>
+  </Block>
+  <Block BlockType="Outport" Name="SOCm" SID="385">
+    <P Name="Position">[480, 23, 510, 37]</P>
+    <P Name="ZOrder">46</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">83</P>
+    <P Name="Src">379#out:1</P>
+    <P Name="Points">[33, 0; 0, -35]</P>
+    <P Name="Dst">377#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">SOCm</P>
+    <P Name="ZOrder">86</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">377#out:1</P>
+    <P Name="Points">[70, 0; 0, -300]</P>
+    <P Name="Dst">385#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">81</P>
+    <P Name="Src">372#out:1</P>
+    <P Name="Dst">377#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">82</P>
+    <P Name="Src">378#out:1</P>
+    <P Name="Dst">379#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">85</P>
+    <P Name="Src">384#out:1</P>
+    <P Name="Points">[19, 0; 0, 126; -269, 0; 0, 119]</P>
+    <P Name="Dst">372#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">80</P>
+    <P Name="Src">375#out:1</P>
+    <P Name="Dst">372#in:2</P>
+  </Line>
+</System>

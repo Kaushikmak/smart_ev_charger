@@ -1,0 +1,50 @@
+{
+  "BlockDiagram":{
+    "ConcurrentExecutionSettings":{
+      "DataTransfer":{
+        "_id":"2",
+        "_object_class":"Simulink.GlobalDataTransfer",
+        "_properties":{}
+      }
+    },
+    "ConfigManagerSettings":{
+      "ModelVersionFormat":"%<AutoIncrement:1.4>",
+      "ModifiedByFormat":"%<Auto>",
+      "ModifiedDateFormat":"%<Auto>"
+    },
+    "EngineSettings":{
+      "IsSoftwareComponent":false
+    },
+    "LastSavedArchitecture":"maca64",
+    "ModelUUID":"ee0c1734-3953-449d-8c43-f654204c52f8",
+    "SLXCompressionType":"None",
+    "SimulationSettings":{
+      "DataLoggingOverride":{
+        "_id":"1",
+        "_mw_element_type":"COSObject",
+        "_object_class":"Simulink.SimulationData.ModelLoggingInfo",
+        "_properties":{
+          "logAsSpecifiedByModelsSSIDs_":{
+            "_array_type":"Cell",
+            "_dimensions":[1,  1],
+            "_elements":[[]]
+          },
+          "logAsSpecifiedByModels_":{
+            "_array_type":"Cell",
+            "_dimensions":[1,  1],
+            "_elements":["$bdroot"]
+          },
+          "model_":"$bdroot",
+          "overrideMode_":{
+            "_type":"uint32",
+            "_value":"0U"
+          }
+        }
+      },
+      "SimulationMode":"normal"
+    },
+    "System":{
+      "Ref":"system_root"
+    }
+  }
+}

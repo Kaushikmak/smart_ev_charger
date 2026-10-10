@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <Block BlockType="Inport" Name="In1" SID="356">
+    <P Name="Position">[20, 28, 50, 42]</P>
+    <P Name="ZOrder">61</P>
+  </Block>
+  <Block BlockType="Gain" Name="Gain" SID="357">
+    <P Name="Position">[110, 20, 140, 50]</P>
+    <P Name="ZOrder">56</P>
+    <P Name="Gain">4.5</P>
+  </Block>
+  <Block BlockType="Gain" Name="Gain1" SID="358">
+    <P Name="Position">[120, 106, 165, 144]</P>
+    <P Name="ZOrder">57</P>
+    <P Name="Gain">0.05</P>
+  </Block>
+  <Block BlockType="Integrator" Name="Integrator" SID="359">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[185, 110, 215, 140]</P>
+    <P Name="ZOrder">58</P>
+  </Block>
+  <Block BlockType="Saturate" Name="Saturation" SID="360">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[245, 110, 275, 140]</P>
+    <P Name="ZOrder">60</P>
+    <P Name="UpperLimit">350.4</P>
+    <P Name="LowerLimit">0</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum2" SID="361">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[275, 25, 295, 45]</P>
+    <P Name="ZOrder">59</P>
+    <P Name="Inputs">|++</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="362">
+    <P Name="Position">[355, 28, 385, 42]</P>
+    <P Name="ZOrder">62</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">360#out:1</P>
+    <P Name="Points">[5, 0]</P>
+    <P Name="Dst">361#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">359#out:1</P>
+    <P Name="Dst">360#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">356#out:1</P>
+    <P Name="Points">[23, 0]</P>
+    <Branch>
+      <P Name="ZOrder">4</P>
+      <P Name="Points">[0, 90]</P>
+      <P Name="Dst">358#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">5</P>
+      <P Name="Dst">357#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">361#out:1</P>
+    <P Name="Dst">362#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">358#out:1</P>
+    <P Name="Dst">359#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">357#out:1</P>
+    <P Name="Dst">361#in:1</P>
+  </Line>
+</System>

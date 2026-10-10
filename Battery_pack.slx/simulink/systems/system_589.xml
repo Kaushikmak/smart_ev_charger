@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <Block BlockType="Inport" Name="In1" SID="590">
+    <P Name="Position">[20, 163, 50, 177]</P>
+    <P Name="ZOrder">10</P>
+    <P Name="ShowName">off</P>
+    <P Name="IconDisplay">Port number and signal name</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">it</P>
+        <P Name="PropagatedSignals">it</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="vocv0m" SID="591">
+    <P Name="Position">[315, 213, 345, 227]</P>
+    <P Name="ZOrder">11</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="In2" SID="592">
+    <P Name="Position">[30, 318, 60, 332]</P>
+    <P Name="ZOrder">20</P>
+    <P Name="ShowName">off</P>
+    <P Name="Port">3</P>
+    <P Name="IconDisplay">Port number and signal name</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">theta_amb_m</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Gain" Name="1/12Rs1" SID="593">
+    <P Name="Position">[145, 49, 225, 121]</P>
+    <P Name="ZOrder">8</P>
+    <P Name="Gain">12*4.8e-3</P>
+  </Block>
+  <Block BlockType="BusCreator" Name="Bus&#xA;Creator" SID="594">
+    <PortCounts in="5" out="1"/>
+    <P Name="Position">[560, 69, 565, 141]</P>
+    <P Name="ZOrder">34</P>
+    <P Name="Inputs">5</P>
+    <P Name="DisplayOption">bar</P>
+    <P Name="InheritFromInputs">on</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">m1</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Gain" Name="Gain" SID="595">
+    <P Name="Position">[240, 220, 270, 250]</P>
+    <P Name="ZOrder">6</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">top</P>
+    <P Name="Gain">1/(12*9.244e3)</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="SOC" SID="596">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[195, 415, 370, 475]</P>
+    <P Name="ZOrder">45</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">SOCm</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_596"/>
+  </Block>
+  <Block BlockType="Sum" Name="Sum1" SID="604">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[140, 150, 180, 190]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Inputs">|+-</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum2" SID="605">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[340, 150, 380, 190]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Inputs">|++</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">vocv</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Sum" Name="Sum3" SID="606">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[380, 65, 420, 105]</P>
+    <P Name="ZOrder">9</P>
+    <P Name="Inputs">|++</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">vtm</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="SubSystem" Name="Theramal" SID="607">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[195, 280, 370, 340]</P>
+    <P Name="ZOrder">36</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">theta_bat_m</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_607"/>
+  </Block>
+  <Block BlockType="TransferFcn" Name="Transfer Fcn" SID="615">
+    <P Name="Position">[200, 152, 305, 188]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Denominator">[168.75e3/12 0]</P>
+  </Block>
+  <Block BlockType="Outport" Name="vocvm" SID="616">
+    <P Name="Position">[590, 163, 620, 177]</P>
+    <P Name="ZOrder">14</P>
+  </Block>
+  <Block BlockType="Outport" Name="vocvm1" SID="617">
+    <P Name="Position">[590, 98, 620, 112]</P>
+    <P Name="ZOrder">35</P>
+    <P Name="ShowName">off</P>
+    <P Name="Port">2</P>
+    <P Name="IconDisplay">Port number and signal name</P>
+  </Block>
+  <Line>
+    <P Name="Name">vtm</P>
+    <P Name="ZOrder">1</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">606#out:1</P>
+    <P Name="Points">[65, 0; 0, 5]</P>
+    <P Name="Dst">594#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">604#out:1</P>
+    <P Name="Dst">615#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">vocv</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">605#out:1</P>
+    <P Name="Points">[15, 0]</P>
+    <Branch>
+      <P Name="ZOrder">4</P>
+      <P Name="Labels">[1, 0]</P>
+      <P Name="Points">[0, 32; -107, 0; 0, 33]</P>
+      <P Name="Dst">595#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">5</P>
+      <P Name="Dst">606#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">6</P>
+      <P Name="Points">[62, 0]</P>
+      <Branch>
+        <P Name="ZOrder">7</P>
+        <P Name="Points">[0, 32; -285, 0; 0, 243]</P>
+        <P Name="Dst">596#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">8</P>
+        <P Name="Points">[0, -65]</P>
+        <P Name="Dst">594#in:3</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">9</P>
+        <P Name="Dst">616#in:1</P>
+      </Branch>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">615#out:1</P>
+    <P Name="Dst">605#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">595#out:1</P>
+    <P Name="Points">[-75, 0]</P>
+    <P Name="Dst">604#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">591#out:1</P>
+    <P Name="Points">[10, 0]</P>
+    <P Name="Dst">605#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">593#out:1</P>
+    <P Name="Dst">606#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">it</P>
+    <P Name="FontName">Helvetica</P>
+    <P Name="FontSize">9</P>
+    <P Name="FontWeight">normal</P>
+    <P Name="FontAngle">normal</P>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">590#out:1</P>
+    <P Name="Points">[66, 0]</P>
+    <Branch>
+      <P Name="ZOrder">15</P>
+      <P Name="Points">[0, -29]</P>
+      <Branch>
+        <P Name="ZOrder">17</P>
+        <P Name="Labels">[1, 0]</P>
+        <P Name="Points">[0, -56]</P>
+        <P Name="Dst">593#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">18</P>
+        <P Name="Points">[326, 0; 0, -66]</P>
+        <P Name="Dst">594#in:1</P>
+      </Branch>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">16</P>
+      <P Name="Points">[4, 0]</P>
+      <Branch>
+        <P Name="ZOrder">19</P>
+        <P Name="Points">[0, 125]</P>
+        <P Name="Dst">607#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">20</P>
+        <P Name="Dst">604#in:1</P>
+      </Branch>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">m1</P>
+    <P Name="ZOrder">21</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">594#out:1</P>
+    <P Name="Dst">617#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">theta_amb_m</P>
+    <P Name="ZOrder">22</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">592#out:1</P>
+    <P Name="Dst">607#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">theta_bat_m</P>
+    <P Name="ZOrder">23</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">607#out:1</P>
+    <P Name="Points">[56, 0; 0, -190]</P>
+    <P Name="Dst">594#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">SOCm</P>
+    <P Name="ZOrder">24</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">596#out:1</P>
+    <P Name="Points">[136, 0; 0, -310]</P>
+    <P Name="Dst">594#in:5</P>
+  </Line>
+</System>
